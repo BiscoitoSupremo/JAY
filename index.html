@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refúgio do Jogador</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="menu">
+      <button onclick="showSection('ficha')">Ficha</button>
+      <button onclick="showSection('diario')">Diário</button>
+      <button onclick="showSection('dado')">Dado</button>
+    </div>
+
+    <div class="player-area">
+      <div class="player-photo">
+        <img src="MANTINHA.png" alt="Personagem" id="personagem-img">
+      </div>
+      <div class="player-info">
+        <h3 class="body">Ficha do Personagem</h3>
+        <div id="ficha-content" class="ficha">
+          <img src="IMG-20250104-WA0000.jpg" alt="Imagem da Ficha" class="ficha-imagem">
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="ficha" style="display: none;">
+    </div>
+
+    <div class="section" id="diario" style="display: none;">
+      <h3>Diário Pessoal</h3>
+      <textarea id="diario-texto" placeholder="Escreva seu diário..."></textarea>
+      <button class="botao" onclick="salvarDiario()">Salvar Diário</button>
+    </div>
+
+    <div class="section" id="dado" style="display: none;">
+      <h3>Rolar D20</h3>
+      <button class="botao dado" onclick="rolarDado()">
+        <span id="dice-icon" class="dice-icon">🎲</span>
+      </button>
+      <div id="dice-result"></div>
+    </div>
+    <button class="mode-switch" onclick="alternarModo()">Sangue ou Poeira?</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
